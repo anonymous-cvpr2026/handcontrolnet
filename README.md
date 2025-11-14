@@ -1,14 +1,15 @@
 # HandControlNet (CVPR 2026 Anonymous Submission)
 
-> Lightweight ControlNet adapter for anime hand anomaly mitigation using only 677 images.
+> Lightweight ControlNet adapter for anime hand anomaly mitigation.
 
 ## Files
 - `training_data.json`: 677 annotated anime hand images (bbox)
-- `advanced_controlnet.pth`: Trained ControlNet weights
 - `advanced_controlnet.py`: Training & inference code
-- `hand_annotation_tool.zip`: Visualization tool
+- `hand_annotation_tool.zip`: Annotation visualization tool
+- **Model weights**: [anonymous-cvpr2026/handcontrolnet](https://huggingface.co/anonymous-cvpr2026/handcontrolnet)
 
-## Quick Start
+## Quick Inference
 ```bash
-pip install torch diffusers transformers accelerate
+pip install -r requirements.txt
+# Download model from HF, then:
 python advanced_controlnet.py --infer
